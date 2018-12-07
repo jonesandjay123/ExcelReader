@@ -1,4 +1,4 @@
-﻿using log4net;
+//using log4net;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,8 +17,8 @@ namespace ExcelReader
     public partial class Reader : Form
     {
 
-        public ILog log;
-        public string Log4ConfigFilePath { get { return AppDomain.CurrentDomain.BaseDirectory + @"\\" + ConfigurationManager.AppSettings["Log4ConfigFileName"]; } }
+        //public ILog log;
+        //public string Log4ConfigFilePath { get { return AppDomain.CurrentDomain.BaseDirectory + @"\\" + ConfigurationManager.AppSettings["Log4ConfigFileName"]; } }
 
         public Reader()
         {
@@ -93,7 +93,7 @@ namespace ExcelReader
 
                     #region ===驗證副檔名===
                     string ext = Path.GetExtension(path);
-                    if (ext.Equals(".xls") || ext.Equals(".xls") || ext.Equals(".xlsm"))
+                    if (ext.Equals(".xls") || ext.Equals(".xls") || ext.Equals(".xlsm") || ext.Equals(".xlsx"))
                     {
                         //通過
                         progressBar1.PerformStep(); //進度值+1
